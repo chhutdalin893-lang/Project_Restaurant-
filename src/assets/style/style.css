@@ -18,15 +18,6 @@
 }
 
 header {
-    @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
-
-
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 
     :root {
         --extant-clr: #fff4cc;
@@ -93,21 +84,23 @@ header {
         & .action {
             display: flex;
 
-            & .acc {
-                color: white;
+            & .cp {
                 font-family: var(--bodyline-font);
                 background-color: unset;
                 border: 1px solid white;
             }
 
             & .fa-bag-shopping {
-                color: var(--extant-clr);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: rgba(128, 128, 128, 0.353);
                 width: 38px;
                 cursor: pointer;
+            }
+
+            & .fa-bars, .fa-bag-shopping, .cp{
+                color: var(--extant-clr);
             }
 
         }
