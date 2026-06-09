@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 
 * {
     padding: 0;
@@ -7,25 +8,15 @@
     box-sizing: border-box;
 }
 
-
-
 :root {
     --extant-clr: #fff4cc;
     --base-clr: #daa520;
-    --body-clr: rgb(177, 161, 161);
+    --sub-clr: #fff4cca4;
     --head-font: "Aboreto", system-ui;
-    --bodyline-font: "Andada Pro", serif;
+    --federo-font: "Federo", sans-serif;
 }
 
 header {
-
-    :root {
-        --extant-clr: #fff4cc;
-        --base-clr: #daa520;
-        --body-clr: rgb(177, 161, 161);
-        --head-font: "Aboreto", system-ui;
-        --bodyline-font: "Andada Pro", serif;
-    }
 
     .container-fluid {
         /* border-image: fill 1 linear-gradient(#1a473161); */
@@ -33,7 +24,12 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
         backdrop-filter: blur(14px);
-        border-image: fill 1 linear-gradient(to top right, #daa520a8, #000000ac, #0000009a, #0000009a);
+        border-image: fill 1 linear-gradient(to top right, #daa520a8, #000000ac, #000000c1, #0000009a);
+    }
+
+    .container-fluid {
+        width: 100%;
+        height: 100vh;
     }
 
     .container-fluid::before {
@@ -60,6 +56,7 @@ header {
 
     .navbar {
         height: 90px;
+        padding-left: 30px;
         /* background-color: var(--base-clr); */
 
         & .navbar-brand {
@@ -72,9 +69,16 @@ header {
             }
         }
 
+        & .fa-bars {
+            color: var(--extant-clr);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         & .nav-link {
             color: var(--extant-clr);
-            font-family: var(--bodyline-font);
+            font-family: var(--federo-font);
         }
 
         & .nav-link:hover {
@@ -99,7 +103,8 @@ header {
                 cursor: pointer;
             }
 
-            & .fa-bars, .fa-bag-shopping, .cp{
+            & .fa-bag-shopping,
+            .cp {
                 color: var(--extant-clr);
             }
 
@@ -108,57 +113,25 @@ header {
 
     }
 
-    .hero {
-        width: 100%;
-        height: 650px;
-
-        & .img {
-            width: 260px;
-            height: 100%;
-            padding-top: 20px;
-
-            & img {
-                width: 100%;
-                height: 350px;
-                background-color: aqua;
-                box-shadow: 4px -4px 1px 1px var(--base-clr);
-                border-radius: 6px;
-                border: 3px solid var(--extant-clr);
-            }
-        }
-
-        & .article2 {
-            width: 70%;
-            height: 100%;
-
-            & .headline h1 {
-                font-family: var(--head-font);
-                font-size: 3rem;
-                color: var(--extant-clr);
-
-                & span {
-                    color: var(--base-clr);
-                }
-            }
-
-            & p,
-            .call-to-action {
-                font-family: var(--bodyline-font);
-                color: rgb(177, 161, 161);
-
-            }
-
-            & .call-to-action {
-                background-color: unset;
-                background-color: var(--extant-clr);
-                color: black;
-
-                & .fa-arrow-right {
-                    color: var(--base-clr);
-                }
-            }
+    @media (min-width:992px) {
+        .offcanvas-start {
+            visibility: hidden;
         }
     }
+
+    & .offcanvas-end {
+
+        & h4 {
+            font-family: var(--federo-font);
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: gray;
+        }
+    }
+
 }
 
 /* body {}
