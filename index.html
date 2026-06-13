@@ -1,237 +1,157 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/assets/style/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <header>
-    <nav>
-      <div class="container-fluid px-0">
-        <nav class="navbar navbar-expand-lg d-flex justify-content-center">
-          <div class="w-100 d-flex justify-content-between">
-            <div class="d-flex gap-2 px-1">
-              <div class="d-flex">
-                <i
-                  class="fa-solid fa-bars fs-3 d-flex justify-content-center align-self-center d-lg-none"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#staticBackdrop"
-                  aria-controls="staticBackdrop"
-                ></i>
-              </div>
-              <a class="navbar-brand mt-1" href="#">
-                <h1 class="">logo</h1>
-              </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/assets/style/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="mb-5">
+    <div class="container-fluid px-0 overflow-hidden">
+      <nav class="navbar navbar-expand-lg d-flex justify-content-center">
+        <div class="w-100 d-flex justify-content-between">
+          <div class="d-flex gap-2 px-1">
+            <div class="d-flex">
+              <i class="fa-solid fa-bars fs-3 d-flex justify-content-center align-self-center d-lg-none" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"></i>
             </div>
-            <div
-              class="collapse navbar-collapse justify-content-center px-5"
-              id="navbarNavAltMarkup"
-            >
-              <div class="navbar-nav gap-4">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-                <a
-                  class="nav-link"
-                  href="./src/components/shop.html"
-                  target="_blank"
-                  >Shop</a
-                >
-                <a class="nav-link" href="#">About Us</a>
-                <a class="nav-link" href="#">Media</a>
-                <a class="nav-link" href="#">Contact</a>
-              </div>
-            </div>
-            <div class="action d-flex">
-              <div class="p-4 d-flex">
-                <div class="d-flex">
-                  <i
-                    class="fa-solid fa-bag-shopping mx-4 rounded-3"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight"
-                    aria-controls="offcanvasRight"
-                  ></i>
-                </div>
-                <button
-                  class="cp px-3 py-1 fw-medium border-top-0 border-end-0 border-start-0"
-                >
-                  Cuppon
-                </button>
-              </div>
-            </div>
+            <a class="navbar-brand mt-1" href="#">
+              <h1 class="">logo</h1>
+            </a>
           </div>
-        </nav>
-
-
-
-
-
-
-        <div class="container-xxl py-5 mt-md-5">
-          <div class="container">
-            <div class="row g-4 g-lg-5 align-items-center">
-              <div class="col-lg-6 order-2 order-lg-1">
-                <div class="row g-2 g-sm-3">
-                  <div class="col-6 text-start">
-                    <img
-                      class="img-fluid rounded wow zoomIn w-100"
-                      src="https://changkrankhmer.opte.io/wp-content/uploads/sites/3113/2019/04/home-welcome.jpg"
-                      alt="Welcome to Changkran Khmer"
-                    />
-                  </div>
-                  <div class="col-6 text-start">
-                    <img
-                      class="img-fluid rounded wow zoomIn w-75 pt-3 pt-sm-4 pt-md-5"
-                      src="https://t4.ftcdn.net/jpg/19/09/98/31/360_F_1909983126_EzK5S14ydlIb7QzI4gwZx0eZR03arqiC.jpg"
-                      alt="Delicious Khmer dish"
-                    />
-                  </div>
-                  <div class="col-6 text-end">
-                    <img
-                      class="img-fluid rounded wow zoomIn w-75"
-                      src="https://www.thewanderingpalate.com/wp-content/uploads/Khmer-Cuisine-3-a-delicious-khmer-food.jpg"
-                      alt="Traditional Khmer Cuisine"
-                    />
-                  </div>
-                  <div class="col-6 text-end">
-                    <img
-                      class="img-fluid rounded wow zoomIn w-100"
-                      src="https://images.squarespace-cdn.com/content/v1/5854c249bebafb497fb1865e/1616755337625-IK3UKAADIU2HT4UBAWX2/20201113_Khmer_Surin_Rooftop_0414_5_6_1000px.jpg"
-                      alt="Khmer Surin Rooftop Dining"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="col-lg-6 order-1 order-lg-2 text-center text-lg-start"
-              >
-                <h1 class="display-5 mb-3 mb-md-4 text-light fw-bold">
-                  Welcome to Khmer Dining
-                </h1>
-                <p class="text-light opacity-75">
-                  Enjoy restaurant-quality meals delivered to your doostep with premium ingredients and chef's expertise
-                </p>
-                <p class="text-light opacity-75">From our kitchen to your sanctuary—indulge in beautifully balanced, chef-driven meals made from scratch. No prep, no hassle, just extraordinary flavor delivered daily.</p>
-
-                <div
-                  class="row g-3 justify-content-center justify-content-lg-start"
-                >
-                  <div class="col-6 col-sm-5 col-md-4 col-lg-5">
-                    <a href="#" class="btn btn-outline-light w-100 py-2 fs-6">
-                      Booking Table
-                      <i class="fa-solid fa-arrow-right-long ms-1"></i>
-                    </a>
-                  </div>
-                  <div class="col-6 col-sm-5 col-md-4 col-lg-5">
-                    <a
-                      href="#"
-                      class="btn btn-warning text-dark fw-bold w-100 py-2 fs-6"
-                    >
-                      View Menu <i class="fa-solid fa-utensils ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <!-- Offcanvas -->
-
-        <!-- offcanvas right -->
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasRight"
-          aria-labelledby="offcanvasRightLabel"
-        >
-          <div
-            class="offcanvas-header d-flex justify-content-between bg-body-tertiary"
-          >
-            <h4
-              class="offcanvas-title fw-medium text-uppercase"
-              id="offcanvasRightLabel"
-            >
-              Your Bag
-            </h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="line"></div>
-          <div class="offcanvas-body">
-            <h1 class="text-center mt-5 fw-normal">Empty</h1>
-          </div>
-        </div>
-
-        <!-- offcanvas left -->
-
-        <div
-          class="offcanvas offcanvas-start"
-          data-bs-backdrop="static"
-          tabindex="-1"
-          id="staticBackdrop"
-          aria-labelledby="staticBackdropLabel"
-        >
-          <div class="offcanvas-header bg-body-tertiary">
-            <h5 class="offcanvas-title" id="staticBackdropLabel">Menu</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
+          <div class="collapse navbar-collapse justify-content-center px-5" id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
               <a class="nav-link" aria-current="page" href="#">Home</a>
-              <a
-                class="nav-link"
-                href="./src/components/shop.html"
-                target="_blank"
-                >Shop</a
-              >
+              <a class="nav-link" href="./src/components/shop.html" target="_blank">Shop</a>
               <a class="nav-link" href="#">About Us</a>
               <a class="nav-link" href="#">Media</a>
               <a class="nav-link" href="#">Contact</a>
             </div>
           </div>
+          <div class="action d-flex">
+            <div class="p-4 d-flex">
+              <div class="d-flex">
+                <i class="fa-solid fa-bag-shopping mx-4 rounded-3" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+              </div>
+              <button class="cp px-3 py-1 fw-medium border-top-0 border-end-0 border-start-0">
+                Cuppon
+              </button>
+            </div>
+          </div>
         </div>
+      </nav>
 
-        <!-- Hero section -->
+
+      <div class="hero container-xxl py-5 mt-md-5">
+        <div class="container">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <div class="row g-2 g-sm-3">
+                <div class="col-6 text-start">
+                  <img class="img-fluid rounded wow zoomIn w-100"
+                    src="https://changkrankhmer.opte.io/wp-content/uploads/sites/3113/2019/04/home-welcome.jpg"
+                    alt="Welcome to Changkran Khmer" />
+                </div>
+                <div class="col-6 text-start">
+                  <img class="img-fluid rounded wow zoomIn w-75 pt-3 pt-sm-4 pt-md-5"
+                    src="https://t4.ftcdn.net/jpg/19/09/98/31/360_F_1909983126_EzK5S14ydlIb7QzI4gwZx0eZR03arqiC.jpg"
+                    alt="Delicious Khmer dish" />
+                </div>
+                <div class="col-6 text-end">
+                  <img class="img-fluid rounded wow zoomIn w-75"
+                    src="https://www.thewanderingpalate.com/wp-content/uploads/Khmer-Cuisine-3-a-delicious-khmer-food.jpg"
+                    alt="Traditional Khmer Cuisine" />
+                </div>
+                <div class="col-6 text-end">
+                  <img class="img-fluid rounded wow zoomIn w-100"
+                    src="https://images.squarespace-cdn.com/content/v1/5854c249bebafb497fb1865e/1616755337625-IK3UKAADIU2HT4UBAWX2/20201113_Khmer_Surin_Rooftop_0414_5_6_1000px.jpg"
+                    alt="Khmer Surin Rooftop Dining" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 order-1 order-lg-2 text-center text-lg-start">
+              <h1 class="headline display-5 mb-3 mb-md-4 text-light fw-bold">
+                Welcome to <span>Khmer Dining</span>
+              </h1>
+              <p class="text-light opacity-75">
+                Enjoy restaurant-quality meals delivered to your doostep with premium ingredients and chef's expertise
+              </p>
+              <p class="text-light opacity-75">From our kitchen to your sanctuary—indulge in beautifully balanced,
+                chef-driven meals made from scratch. No prep, no hassle, just extraordinary flavor delivered daily.</p>
+
+              <div class="row g-3 justify-content-center justify-content-lg-start">
+                <div class="col-6 col-sm-5 col-md-4 col-lg-5">
+                  <a href="#" class="btn btn-outline-light w-100 py-2 fs-6">
+                    Booking Table
+                    <i class="fa-solid fa-arrow-right-long ms-1"></i>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-5 col-md-4 col-lg-5">
+                  <a href="./src/components/shop.html" class="btn btn-warning text-dark fw-bold w-100 py-2 fs-6">
+                    View Menu <i class="fa-solid fa-utensils ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+
+
+
+
+
+      <!-- Offcanvas -->
+
+      <!-- offcanvas right -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header d-flex justify-content-between bg-body-tertiary">
+          <h4 class="offcanvas-title fw-medium text-uppercase" id="offcanvasRightLabel">
+            Your Bag
+          </h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="line"></div>
+        <div class="offcanvas-body">
+          <h1 class="text-center mt-5 fw-normal">Empty</h1>
+        </div>
+      </div>
+
+      <!-- offcanvas left -->
+
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+        aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header bg-body-tertiary">
+          <h5 class="offcanvas-title" id="staticBackdropLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-nav gap-4">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="./src/components/shop.html" target="_blank">Shop</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Media</a>
+            <a class="nav-link" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <body>
+  <body class="">
     <div class="container-xxl py-5">
       <div class="container">
         <div class="row g-4">
@@ -285,22 +205,15 @@
     <div class="container-xxl py-5">
       <div class="container">
         <div class="text-center wow fadeInUp">
-          <h5
-            class="section-title ff-secondary text-center text-warning fw-bold"
-          >
+          <h5 class="section-title ff-secondary text-center text-warning fw-bold">
             Food Menu
           </h5>
           <h1 class="fw-bold">Most Popular Items</h1>
         </div>
         <div class="tab-class text-center wow fadeInUp" data-wow-deplay="0.1s">
-          <ul
-            class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5"
-          >
+          <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
             <li class="nav-item">
-              <a
-                href=""
-                class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none"
-              >
+              <a href="" class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none">
                 <i class="fa fa-hamburger fa-2x text-warning"></i>
                 <div class="ps-3">
                   <small class="text-body">Special</small>
@@ -310,13 +223,8 @@
             </li>
 
             <li class="nav-item">
-              <a
-                href=""
-                class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none"
-              >
-                <i
-                  class="fa-solid fa-martini-glass-citrus fa-2x text-warning"
-                ></i>
+              <a href="" class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none">
+                <i class="fa-solid fa-martini-glass-citrus fa-2x text-warning"></i>
                 <div class="ps-3">
                   <small class="text-body">Lovely</small>
                   <h6 class="mt-n1 mb-0 text-dark">Drink</h6>
@@ -324,10 +232,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a
-                href=""
-                class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none"
-              >
+              <a href="" class="d-flex align-items-center text-start mx-3 pb-3 text-decoration-none">
                 <i class="fa-solid fa-utensils fa-2x text-warning"></i>
                 <div class="ps-3">
                   <small class="text-body">Sweetie</small>
@@ -344,14 +249,10 @@
                   <div class="d-flex align-items-center">
                     <img
                       src="https://images.squarespace-cdn.com/content/v1/62e142d43354ad73f5540791/5e936f54-e8a2-4060-8734-a445c330e90f/cambodian-fish-amok-chef-nak.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px; height: 120; object-fit: cover"
-                    />
+                      alt="" class="flex-shrink-0 img-fluid rounded"
+                      style="width: 120px; height: 120; object-fit: cover" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Amok Trey (Fish Amok)</span>
                       </h5>
                       <small class="fst-italic">
@@ -364,16 +265,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="https://www.cambodiaembassyuk.org/wp-content/uploads/2023/11/Num-Banh-Chok-Khmer.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px; height: 120"
-                    />
+                    <img src="https://www.cambodiaembassyuk.org/wp-content/uploads/2023/11/Num-Banh-Chok-Khmer.jpg"
+                      alt="" class="flex-shrink-0 img-fluid rounded" style="width: 120px; height: 120" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Nom Banh Chok (Khmer Noodles)</span>
                       </h5>
                       <small class="fst-italic">
@@ -386,16 +281,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="https://thidaskitchen.com/wp-content/uploads/2022/07/Bai-Sach-Chrouk.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px; height: 120"
-                    />
+                    <img src="https://thidaskitchen.com/wp-content/uploads/2022/07/Bai-Sach-Chrouk.jpg" alt=""
+                      class="flex-shrink-0 img-fluid rounded" style="width: 120px; height: 120" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Bai Sach Chrouk</span>
                       </h5>
                       <small class="fst-italic">
@@ -408,16 +297,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="https://thidaskitchen.com/wp-content/uploads/2022/09/Phnom-Penl-Noodles.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px"
-                    />
+                    <img src="https://thidaskitchen.com/wp-content/uploads/2022/09/Phnom-Penl-Noodles.jpg" alt=""
+                      class="flex-shrink-0 img-fluid rounded" style="width: 120px" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Kuy Teav</span>
                       </h5>
                       <small class="fst-italic">
@@ -429,16 +312,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="https://www.chichilicious.com/wp-content/uploads/bo-luc-lac-recipe-chichilicious-food.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px; height: 80px"
-                    />
+                    <img src="https://www.chichilicious.com/wp-content/uploads/bo-luc-lac-recipe-chichilicious-food.jpg"
+                      alt="" class="flex-shrink-0 img-fluid rounded" style="width: 120px; height: 80px" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Beef Lok Lak</span>
                       </h5>
                       <small class="fst-italic">
@@ -451,16 +328,10 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="https://toursbyjeeps.com/wp-content/uploads/2020/12/Untitled-1.jpg"
-                      alt=""
-                      class="flex-shrink-0 img-fluid rounded"
-                      style="width: 120px; height: 80px"
-                    />
+                    <img src="https://toursbyjeeps.com/wp-content/uploads/2020/12/Untitled-1.jpg" alt=""
+                      class="flex-shrink-0 img-fluid rounded" style="width: 120px; height: 80px" />
                     <div class="w-100 d-flex flex-column text-start ps-4">
-                      <h5
-                        class="d-flex justify-content-between border-bottom pb-2"
-                      >
+                      <h5 class="d-flex justify-content-between border-bottom pb-2">
                         <span>Samlar Korkor</span>
                       </h5>
                       <small class="fst-italic">
@@ -481,86 +352,71 @@
 
 
     <!-- Chef  -->
-  <div class="container-xxl mt-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-          <h1
-            class="fw-bold text-warning mb-2 position-relative d-inline-block pb-2"
-          >
-            Meet Our Professional Chefs
-            <span
-              class="position-absolute bottom-0 start-50 translate-middle-x bg-warning rounded"
-              style="width: 80px; height: 4px"
-            ></span>
-          </h1>
-          <p class="text-muted mt-3 max-w-md mx-auto">
-            Discover the visionary culinary artists preserving heritage and
-            shaping the future of Cambodian cuisine.
-          </p>
+    <div class="container-xxl mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h1 class="fw-bold text-warning mb-2 position-relative d-inline-block pb-2">
+              Meet Our Professional Chefs
+              <span class="position-absolute bottom-0 start-50 translate-middle-x bg-warning rounded"
+                style="width: 80px; height: 4px"></span>
+            </h1>
+            <p class="text-muted mt-3 max-w-md mx-auto">
+              Discover the visionary culinary artists preserving heritage and
+              shaping the future of Cambodian cuisine.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-xxl py-5">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 text-center text-lg-center">
-          <h2 class="fw-bold mb-3">
-            Chef Nak’s Culinary World <br />
-            <span class="text-muted fs-4 fw-light"
-              >Where Tradition Meets Innovation</span
-            >
-          </h2>
-          <p class="text-secondary lh-base ps-lg-3 border-start-lg">
-            Chef Nak (Rotanak Ros) is an award-winning Cambodian chef, author,
-            and culinary ambassador preserving and elevating Khmer cuisine
-            through research, storytelling, and unforgettable hospitality. Based
-            in Phnom Penh and Siem Reap, she leads a modern Cambodian culinary
-            movement rooted in heritage, bringing royal and home recipes back
-            into everyday conversation and onto the world stage.
-          </p>
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 text-center text-lg-center">
+            <h2 class="fw-bold mb-3">
+              Chef Nak’s Culinary World <br />
+              <span class="text-muted fs-4 fw-light">Where Tradition Meets Innovation</span>
+            </h2>
+            <p class="text-secondary lh-base ps-lg-3 border-start-lg">
+              Chef Nak (Rotanak Ros) is an award-winning Cambodian chef, author,
+              and culinary ambassador preserving and elevating Khmer cuisine
+              through research, storytelling, and unforgettable hospitality. Based
+              in Phnom Penh and Siem Reap, she leads a modern Cambodian culinary
+              movement rooted in heritage, bringing royal and home recipes back
+              into everyday conversation and onto the world stage.
+            </p>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <img class="img-fluid rounded-4 shadow-sm" style="max-width: 85%; height: auto"
+              src="https://images.squarespace-cdn.com/content/v1/62e142d43354ad73f5540791/6e33aac6-8348-4e3e-8c18-73dc8d66fcac/Chef+Nak+with+her+cookbooks.jpg?format=750w"
+              alt="Chef Nak" />
+          </div>
         </div>
-        <div class="col-lg-6 d-flex justify-content-center">
-          <img
-            class="img-fluid rounded-4 shadow-sm"
-            style="max-width: 85%; height: auto"
-            src="https://images.squarespace-cdn.com/content/v1/62e142d43354ad73f5540791/6e33aac6-8348-4e3e-8c18-73dc8d66fcac/Chef+Nak+with+her+cookbooks.jpg?format=750w"
-            alt="Chef Nak"
-          />
-        </div>
-      </div>
 
-      <div class="my-4 border-top opacity-25"></div>
+        <div class="my-4 border-top opacity-25"></div>
 
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 d-flex justify-content-center order-2 order-lg-1">
-          <img
-            class="img-fluid rounded-4 shadow-sm"
-            style="max-width: 85%; height: auto"
-            src="https://www.sovrinmagazine.com/assets/upload/thumbnail/2198_1756803221.jpeg"
-            alt="Sao Sopheak"
-          />
-        </div>
-        <div class="col-lg-6 text-center text-lg-cen order-1 order-lg-2">
-          <h2 class="fw-bold mb-3">
-            Sao Sopheak <br />
-            <span class="text-muted fs-4 fw-light"
-              >Cambodia’s Culinary Alchemist</span
-            >
-          </h2>
-          <p class="text-secondary lh-base ps-lg-3 border-start-lg">
-            In 2019, he won the bronze medal in the “Global Chef” category at
-            the Thailand Ultimate Chef Challenge. His cookbook, which in 2022
-            won the Gourmet World Cookbook Award for best Asian cookbook,
-            further enhanced his reputation. In 2024, he was named Best Master
-            Chef at the Best Awards in Singapore, and in 2025 he became the
-            first ambassador for Sturia caviar in Cambodia.
-          </p>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 d-flex justify-content-center order-2 order-lg-1">
+            <img class="img-fluid rounded-4 shadow-sm" style="max-width: 85%; height: auto"
+              src="https://www.sovrinmagazine.com/assets/upload/thumbnail/2198_1756803221.jpeg" alt="Sao Sopheak" />
+          </div>
+          <div class="col-lg-6 text-center text-lg-cen order-1 order-lg-2">
+            <h2 class="fw-bold mb-3">
+              Sao Sopheak <br />
+              <span class="text-muted fs-4 fw-light">Cambodia’s Culinary Alchemist</span>
+            </h2>
+            <p class="text-secondary lh-base ps-lg-3 border-start-lg">
+              In 2019, he won the bronze medal in the “Global Chef” category at
+              the Thailand Ultimate Chef Challenge. His cookbook, which in 2022
+              won the Gourmet World Cookbook Award for best Asian cookbook,
+              further enhanced his reputation. In 2024, he was named Best Master
+              Chef at the Best Awards in Singapore, and in 2025 he became the
+              first ambassador for Sturia caviar in Cambodia.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
@@ -573,31 +429,17 @@
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
-            <h4
-              class="section-title ff-secondary text-start fw-bold mb-4 text-warning"
-            >
+            <h4 class="section-title ff-secondary text-start fw-bold mb-4 text-warning">
               Company
             </h4>
-            <a href="" class="btn btn-link text-decoration-none text-light"
-              >About Us</a
-            >
-            <a href="" class="btn btn-link text-decoration-none text-light"
-              >Contact Us</a
-            >
-            <a href="" class="btn btn-link text-decoration-none text-light"
-              >Reservation</a
-            >
-            <a href="" class="btn btn-link text-decoration-none text-light"
-              >Privacy Policy</a
-            >
-            <a href="" class="btn btn-link text-decoration-none text-light"
-              >Teams & Condition</a
-            >
+            <a href="" class="btn btn-link text-decoration-none text-light">About Us</a>
+            <a href="" class="btn btn-link text-decoration-none text-light">Contact Us</a>
+            <a href="" class="btn btn-link text-decoration-none text-light">Reservation</a>
+            <a href="" class="btn btn-link text-decoration-none text-light">Privacy Policy</a>
+            <a href="" class="btn btn-link text-decoration-none text-light">Teams & Condition</a>
           </div>
           <div class="col-lg-3 col-md-6">
-            <h4
-              class="section-title ff-secondary text-start fw-bold mb-4 text-warning"
-            >
+            <h4 class="section-title ff-secondary text-start fw-bold mb-4 text-warning">
               Contact
             </h4>
             <p class="mb-2">
@@ -609,18 +451,10 @@
               <i class="fa fa-envelope me-3"></i>Info@gmail.com
             </p>
             <div class="d-flex pt-2">
-              <a href="" class="btn btn-outline-light btn-social me-2"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="" class="btn btn-outline-light btn-social me-2"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="" class="btn btn-outline-light btn-social me-2"
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a href="" class="btn btn-outline-light btn-social me-2"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+              <a href="" class="btn btn-outline-light btn-social me-2"><i class="fab fa-twitter"></i></a>
+              <a href="" class="btn btn-outline-light btn-social me-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="btn btn-outline-light btn-social me-2"><i class="fab fa-youtube"></i></a>
+              <a href="" class="btn btn-outline-light btn-social me-2"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -641,13 +475,8 @@
               placeat?
             </p>
             <div class="position-relative mx-auto">
-              <input
-                type="text"
-                class="form-control border-warning w-100 py-3 ps-4 pe-5"
-              />
-              <button
-                class="btn btn-warning py-2 position-absolute top-0 end-0 me-2 mt-2"
-              >
+              <input type="text" class="form-control border-warning w-100 py-3 ps-4 pe-5" />
+              <button class="btn btn-warning py-2 position-absolute top-0 end-0 me-2 mt-2">
                 SingUp
               </button>
             </div>
@@ -661,6 +490,7 @@
     </div>
   </footer>
 
-  <body></body>
-  <script src="./src/assets/js/script.js"></script>
+</body>
+<script src="./src/assets/js/script.js"></script>
+
 </html>

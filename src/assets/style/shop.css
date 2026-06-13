@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --extant-clr: #fff4cc;
+    --base-clr: #daa520;
+    --sub-clr: #fff4cca4;
+    --black: #191c20;
+    --head-font: "Aboreto", system-ui;
+    --federo-font: "Federo", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.conatainer-fluid {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    height: 90px;
+    padding-left: 30px;
+
+    & .navbar-brand {
+        align-items: center;
+
+        h1 {
+            color: var(--base-clr);
+            font-family: var(--head-font);
+        }
+    }
+
+    & .fa-bars {
+        color: var(--black);
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .nav-link,
+    .cp {
+        color: var(--black);
+        font-family: var(--federo-font);
+    }
+
+    & .nav-link:hover {
+        color: var(--base-clr);
+    }
+
+    & .action {
+
+        & .cp {
+            background-color: unset;
+            border: 1px solid var(--black);
+        }
+
+        & .fa-bag-shopping {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: rgba(128, 128, 128, 0.353);
+            width: 38px;
+            height: 37px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.offcanvas {
+
+    & .offcanvas-end {
+
+        & .offcanvas-body {
+            margin-bottom: 200px;
+        }
+
+        & .cart {
+            height: 120px;
+
+            & .image-product {
+                height: 82px;
+            }
+
+            .product-amount {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        & h4 {
+            font-family: var(--federo-font);
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: gray;
+        }
+
+        & .checkout-box {
+            height: 180px;
+            width: 100%;
+            /* background-color: cadetblue; */
+            position: absolute;
+            bottom: 0;
+
+            .box {
+                border: 1px solid;
+
+                .checkout-btn {
+                    background-color: var(--base-clr);
+                    color: var(--extant-clr);
+                }
+            }
+        }
+    }
+}
+
+.action-block {
+    height: 4rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 90px;
+
+    align-items: center;
+
+    .list-group-flush {
+        width: 250px;
+    }
+
+    a {
+        font-family: var(--federo-font);
+    }
+
+    .search {
+        width: 250px;
+        height: 40px;
+
+        & input {
+            border: 1px solid;
+            outline: none;
+        }
+
+    }
+
+}
+
+main {
+    margin-top: 154px;
+    width: 100%;
+    height: 80.5vh;
+    position: fixed;
+
+    & .dasboad {
+        width: 100%;
+        height: 10%;
+
+        & .list-group-item {
+            font-family: var(--federo-font);
+        }
+    }
+
+    & .food-section {
+        width: 100%;
+        height: auto;
+        gap: 90px;
+        overflow-x: auto;
+        overflow-y: auto;
+        overscroll-behavior-y: none;
+
+        & .food-list {
+            max-width: 1300px;
+            width: 100%;
+            height: 320px;
+            grid-template-columns: repeat(7, 1fr);
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            & .cards {
+                width: 190px;
+                height: 300px;
+                align-self: center;
+                border-radius: 5px;
+
+                & .add-btn {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid;
+                    right: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.5s;
+                }
+
+                & .add-btn:hover {
+                    transform: scale(1.1);
+                    transition: all 0.5s;
+                }
+
+            }
+
+
+            & .sub-text {
+                height: 30%;
+            }
+
+            & .image-section {
+                width: 100%;
+                height: 200px;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+
+
+        & .food-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        & .pre-slider {
+            left: 1px;
+        }
+
+        & .next-slider {
+            right: 1px;
+        }
+
+        & h3 {
+            font-family: var(--head-font);
+            font-weight: 800;
+        }
+    }
+
+    & .list-group-flush li {
+        background-color: unset;
+        color: var(--black);
+
+        & .fa-angle-right {
+            color: var(--black);
+        }
+    }
+
+
+    @media (min-width:992px) {
+        & .dasboad {
+            position: absolute;
+            top: 0%;
+            z-index: 1;
+            height: 100%;
+            width: 300px;
+        }
+
+        & .food-section {
+            position: absolute;
+            right: 0;
+            left: 300px;
+            height: 100%;
+            width: 1224px;
+            overflow-x: auto;
+        }
+    }
+}

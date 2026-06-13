@@ -1,48 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/style/shop.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 
-    .container-fluid{
-        width: 100%;
-        height: 100vh;
-
-        & .dasboad{
-            width: 20%;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            border: 1px solid gray;
-        }
-
-        & .food-table{
-            width: 80%;
-            height: 100%;
-        }
-    }
-</style>
 <body>
-    <div class="container-fluid p-0 d-flex flex-row">
-        <div class="dasboad border-top-0 border-bottom-0 border-start-0">
-            <h2 class="text-center">hey</h2>
-        </div>
-        <section class="food-table w-100 bg-info">
-            <div class="menu bg-warning">
 
+    <head class="w-100">
+        <nav class="fixed-top">
+            <div class="container-fluid px-0">
+                <div class="navbar navbar-expand-lg d-flex justify-content-center">
+                    <div class="w-100 d-flex justify-content-between">
+                        <div class="d-flex gap-2 px-3">
+                            <div class="d-flex">
+                                <i class="fa-solid fa-bars fs-3 d-flex justify-content-center align-self-center d-lg-none"
+                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                    aria-controls="staticBackdrop"></i>
+                            </div>
+                            <a class="navbar-brand mt-1 d-flex justify-content-center" href="#">
+                                <h1 class="">logo</h1>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse justify-content-center px-5" id="navbarNavAltMarkup">
+                            <div class="navbar-nav gap-4">
+                                <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+                                <a class="nav-link">Shop</a>
+                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="#">Media</a>
+                                <a class="nav-link" href="#">Contact</a>
+                            </div>
+                        </div>
+                        <div class="action d-flex">
+                            <div class=" p-4 d-flex gap-3">
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-bag-shopping rounded-3" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight"></i>
+                                </div>
+                                <button
+                                    class="cp px-3 py-1 d-none d-md-flex fw-medium border-top-0 border-end-0 border-start-0">Cuppon</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Offcanvas -->
+                <!-- offcanvas right -->
+                <div class="offcanvas ">
+                    <div class="offcanvas offcanvas-end bg-body-tertiary" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header d-flex justify-content-between bg-body-tertiary">
+                            <h4 class="offcanvas-title fw-medium text-uppercase" id="offcanvasRightLabel">Your Bag</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="line"></div>
+                        <div class="offcanvas-body py-5 px-4 gap-3 d-flex flex-column">
+                            <!-- cart -->
+                        </div>
+                        <div class="checkout-box px-2">
+                            <div class="box p-4 border-1 rounded-3 border-secondary bg-white">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <p class="fw-bolder">Total : </p>
+                                    <div id="total-price">
+                                        <!-- Total price should be here -->
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <p class="text-secondary">free delivery</p>
+                                <button class="checkout-btn w-100 border-0 rounded-2 py-2 fw-medium" type="submit">get
+                                    to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- offcanvas left -->
+                    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                        aria-labelledby="staticBackdropLabel">
+                        <div class="offcanvas-header bg-body-tertiary">
+                            <h5 class="offcanvas-title" id="staticBackdropLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="list-group list-group-flush">
+                                <a href="" class="text-decoration-none">
+                                    <li class="list-group-item list-group-item-action text-dark fw-medium">Home</li>
+                                </a>
+                                <a href="" class="text-decoration-none">
+                                    <li class="list-group-item list-group-item-action text-dark fw-medium">About Us</li>
+                                </a>
+                                <a href="" class="text-decoration-none">
+                                    <li class="list-group-item list-group-item-action text-dark fw-medium">Shop</li>
+                                </a>
+                                <a href="" class="text-decoration-none">
+                                    <li class="list-group-item list-group-item-action text-dark fw-medium">Media</li>
+                                </a>
+                                <a href="" class="text-decoration-none">
+                                    <li class="list-group-item list-group-item-action text-dark fw-medium">Contact</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
+        </nav>
+        <div
+            class="action-block w-100 gap-5 gap-md-2 px-4 px-md-5 d-flex justify-content-center justify-content-lg-end bg-body-secondary">
+            <ul class="list-group list-group-flush py-3 px-3 d-lg-none">
+                <a href="./delivery.html" class="delivey text-decoration-none rounded-2 border-secondary">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        delivery
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+            </ul>
+            <div class="search d-none d-md-flex">
+                <input class="rounded-3 px-3 border-secondary w-100" type="text" placeholder="Search...">
+            </div>
+            <div class="search-icon d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                    class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 fw-medium" id="exampleModalLabel">Find your food</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <input class="py-1 px-3 border-dark border-top-0 border-start-0 border-end-0 border-1 w-100"
+                            type="text" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </head>
+
+    <main class="d-flex z-0 flex-column flex-lg-row">
+        <div class="dasboad shadow">
+            <ul class="list-group list-group-flush d-none d-lg-block py-3 px-3 mb-3">
+                <a href="#breakfast" class="text-decoration-none">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        breakfast
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+                <a href="#launch" class="text-decoration-none">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        Launch
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+                <a href="#dinner" class="text-decoration-none">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        Dinner
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+                <a href="#drinks" class="text-decoration-none">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        Drinks
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+                <a href="#party" class="text-decoration-none">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between fw-medium">
+                        Party
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+            </ul>
+            <hr class="d-none d-lg-block">
+            <ul class="list-group list-group-flush d-none d-lg-block py-3 px-3">
+                <a href="./delivery.html" class="text-decoration-none">
+                    <li
+                        class="list-group-item list-group-item-action d-flex justify-content-between fw-medium rounded-3 bg-body-tertiary">
+                        delivery
+                        <i class="fa-solid fa-angle-right align-self-center"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <!-- food section -->
+        <div class="food-section d-flex flex-column py-5 bg-body-tertiary" id="food-section">
+
+        </div>
+    </main>
+
+
 </body>
+<script src="../assets/js/shop.js"></script>
+<script></script>
+
 </html>

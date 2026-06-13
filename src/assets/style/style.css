@@ -19,17 +19,17 @@
 header {
 
     .container-fluid {
-            /* Combine the gradient overlay and the image into one background property */
-            background-image:
-                linear-gradient(to top right, #daa520a8, #000000ac, #000000c1, #0000009a),
-                url('https://i.pinimg.com/1200x/96/ee/55/96ee551279c55efe9f0ff247d369ec97.jpg');
-    
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            backdrop-filter: blur(14px);
-            min-height: 100vh;
-        }
+        /* Combine the gradient overlay and the image into one background property */
+        background-image:
+            linear-gradient(to top right, #daa520a8, #000000ac, #000000c1, #0000009a),
+            url('https://i.pinimg.com/1200x/96/ee/55/96ee551279c55efe9f0ff247d369ec97.jpg');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        backdrop-filter: blur(14px);
+        min-height: 100vh;
+    }
 
     .container-fluid {
         width: 100%;
@@ -114,7 +114,21 @@ header {
 
         }
 
+    }
 
+    & .hero{
+
+        & .headline {
+            font-family: var(--head-font);
+    
+            & span{
+                color: var(--base-clr);
+            }
+        }
+
+        & p{
+            font-family: var(--federo-font);
+        }
     }
 
     @media (min-width:992px) {
