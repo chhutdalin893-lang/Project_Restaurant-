@@ -120,6 +120,12 @@ html {
                 .checkout-btn {
                     background-color: var(--base-clr);
                     color: var(--extant-clr);
+                    transition: all ease-in-out 0.3s
+                }
+
+                .checkout-btn:hover {
+                    transform: scale(1.03);
+                    background-color: #ffb90a;
                 }
             }
         }
@@ -277,5 +283,64 @@ main {
             width: 1224px;
             overflow-x: auto;
         }
+    }
+}
+
+section {
+
+    & .modal-header {
+        background-color: var(--base-clr);
+    }
+
+    & article {
+        padding-top: 60px;
+
+        .bill {
+            width: 500px;
+            height: 680px;
+
+            h3 {
+                font-family: var(--head-font);
+            }
+
+            .us {
+                color: var(--base-clr);
+            }
+
+            .ordered-list {
+                height: 180px;
+                scrollbar-width: none;
+            }
+
+            input {
+                border: 1px solid;
+                outline: none;
+            }
+
+            & button {
+                background-color: var(--base-clr);
+                transition: all 0.2s ease-in-out;
+                font-family: var(--head-font);
+            }
+
+            & button:hover {
+                transform: scale(1.03);
+                background-color: #ffb90a;
+            }
+
+        }
+    }
+
+    & .payment {
+
+        & .modal-content{
+            width: 300px;
+            height: 450px;
+
+            & .head{
+                background-color: red;
+            }
+        }
+
     }
 }

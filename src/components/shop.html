@@ -74,14 +74,17 @@
                             <div class="box p-4 border-1 rounded-3 border-secondary bg-white">
                                 <div class="d-flex w-100 justify-content-between">
                                     <p class="fw-bolder">Total : </p>
-                                    <div id="total-price">
+                                    <div class="total-prices-checkout">
                                         <!-- Total price should be here -->
                                     </div>
                                 </div>
                                 <div class="line"></div>
                                 <p class="text-secondary">free delivery</p>
-                                <button class="checkout-btn w-100 border-0 rounded-2 py-2 fw-medium" type="submit">get
+
+                                <button class="checkout-btn w-100 border-0 rounded-2 py-2 fw-medium" type="submit"
+                                    data-bs-toggle="modal" data-bs-target="#bill" data-bs-whatever="@mdo">get
                                     to checkout</button>
+
                             </div>
                         </div>
                     </div>
@@ -200,6 +203,75 @@
 
         </div>
     </main>
+
+    <section class="container-fluid justify-content-center">
+        <!-- Bill -->
+
+        <div class="modal fade" id="bill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header px-5">
+                        <h1 class="modal-title fs-4 text-white" id="exampleModalLabel">គិតលុយសិន</h1>
+                        <button type="button" class="btn-close bg-white btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-content">
+                        <article class="w-100 d-flex justify-content-center">
+                            <div class="bill bg-body-tertiary rounded-3 py-5 px-5">
+                                <div class="title">
+                                    <h3 class="fw-bold">Your Order from </h3>
+                                    <p class="fw-medium text-secondary">Meanchey ( <span class="us">Phnom Penh</span> )
+                                    </p>
+                                    <hr>
+                                </div>
+                                <div class="ordered-list overflow-y-auto">
+                                    <!-- ordered list -->
+                                </div>
+                                <hr>
+                                <input type="text" class="w-100 rounded-2 border-secondary-subtle py-2 px-3"
+                                    placeholder="we're missing your address / house / street">
+                                <hr>
+                                <div>
+                                    <p class="d-flex justify-content-between   text-secondary">subtotal
+                                        <span>$84.50</span>
+                                    </p>
+                                    <p class="d-flex justify-content-between   text-secondary">standard delivey
+                                        <span>free</span>
+                                    </p>
+                                </div>
+                                <h3 class="d-flex justify-content-between to-be-paid">
+                                    <!-- pay -->
+                                </h3>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <button type="submit"
+                                        class="w-100 rounded-1 border-0 fw-bold text-white fs-4 text-uppercase py-2"
+                                        data-bs-toggle="modal" data-bs-target="#scan">place
+                                        order</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- payment -->
+        <div class="payment modal fade" id="scan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered d-flex justify-content-center rounded-3">
+                <div class="modal-content rounded-5 overflow-hidden gap-5">
+                    <div class="text-center w-100 py-4 head">
+                        <h3 class="text-white fw-bold">KHQR</h3>
+                    </div>
+                    <div class="img d-flex flex-column justify-content-center">
+                        <img class="align-self-center" src="../assets/images/mycode.png"
+                            style="width: 250px; height: 250px;" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 </body>
