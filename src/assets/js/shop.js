@@ -235,7 +235,7 @@ foodData.forEach(element => {
     `;
 });
 
-let purchased = JSON.parse(localStorage.getItem("myData")) || [];
+let purchased = JSON.parse(localStorage.getItem("mybag")) || [];
 
 
 _listfood.addEventListener('click', (e) => {
@@ -252,22 +252,25 @@ _listfood.addEventListener('click', (e) => {
     }
 
     purchased.push(purchasing);
-    localStorage.setItem("myData", JSON.stringify(purchased))
+    localStorage.setItem("mybag", JSON.stringify(purchased))
 
     loadData();
 })
 
 
 let savingProduct = document.querySelector('.offcanvas-body');
-let finalPrice = document.getElementById('total-price')
+let orderedList = document.querySelector('.ordered-list');
+let finalPrice = document.querySelector('.total-prices-checkout');
+let toPay = document.querySelector('.to-be-paid');
+
 function loadData() {
     savingProduct.innerHTML = "";
 
     let total = 0
     purchased.forEach((element, index) => {
 
-        let price = parseFloat(element.s_price.replace('$',''))
-        total  += price;
+        let price = parseFloat(element.s_price.replace('$', ''))
+        total += price;
 
         savingProduct.innerHTML +=
             `
@@ -290,10 +293,25 @@ function loadData() {
     })
 
     finalPrice.innerHTML = `<p>$${total.toFixed(2)}</p>`
+    toPay.innerHTML = `Total : <span>${total.toFixed(2)}</span>`
+
+    orderedList.innerHTML = ""
+    purchased.forEach(element => {
+        orderedList.innerHTML += `
+            <li class="list-unstyled">
+                <p class="d-flex justify-content-between text-secondary">1 x ${element.s_name}
+                    <span>${element.s_price}</span></p>
+            </li>
+        
+        `
+    });
+
 
 
 }
 loadData()
+
+savingProduct.addEventListener('click')
 
 function Delete(index) {
     const swalWithBootstrapButtons = Swal.mixin({
