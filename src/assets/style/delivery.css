@@ -1,0 +1,24 @@
+.navbar{
+    /* background-color: var(--base-clr); */
+}
+
+body{
+    .caption{
+        align-items: center;
+
+        h1{
+            font-family: var(--head-font);
+        }
+    }
+
+    .working{
+        background-color: var(--base-clr);
+        margin-bottom: 90px;
+        margin-top: 30px;
+
+        & h3{
+            color: var(--black);
+        }
+    }
+
+}
